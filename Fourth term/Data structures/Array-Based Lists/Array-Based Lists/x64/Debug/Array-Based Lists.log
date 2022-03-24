@@ -1,0 +1,32 @@
+﻿  Program Test .cpp
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(15,4): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(18,3): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(19,2): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(20,2): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(20,26): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(26,6): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(26,6): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(40,34): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(40,34): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(45,3): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(45,20): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(45,25): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(45,25): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(46,3): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\unorderedArrayListType.h(46,3): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(15,3): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(18,3): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(19,2): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(20,2): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(20,26): error C3861: 'maxSize': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(26,6): error C3861: 'isEmpty': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(26,13): message : 'isEmpty': function declaration must be available as none of the arguments depend on a template parameter
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(40,34): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(40,34): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(45,30): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(45,30): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(46,4): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(46,14): error C3861: 'list': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(47,3): error C2065: 'length': undeclared identifier
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\orderedArrayListType.h(47,3): error C3861: 'length': identifier not found
+E:\SW Engineering\Fourth term\Data structures\Array-Based Lists\Array-Based Lists\Program Test .cpp(6,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
