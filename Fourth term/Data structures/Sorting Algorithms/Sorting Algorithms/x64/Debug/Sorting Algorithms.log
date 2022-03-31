@@ -1,0 +1,3 @@
+﻿  Source.cpp
+E:\SW Engineering\Fourth term\Data structures\Sorting Algorithms\Sorting Algorithms\Source.cpp(206,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Sorting Algorithms.vcxproj -> E:\SW Engineering\Fourth term\Data structures\Sorting Algorithms\x64\Debug\Sorting Algorithms.exe
