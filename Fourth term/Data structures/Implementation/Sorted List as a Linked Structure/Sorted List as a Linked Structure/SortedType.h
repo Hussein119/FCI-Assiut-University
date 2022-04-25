@@ -1,4 +1,5 @@
 #pragma once
+#include"NodeType.h"
 template <class ItemType>
 class SortedType
 {

@@ -1,9 +1,14 @@
 #include<iostream>
 #include"SortedType.h"
 using namespace std;
-void main() {
+int main() {
+
+	SortedType <int> list;
+	list.InsertItem(20);
+	list.InsertItem(20);
+	list.InsertItem(20);
+	list.InsertItem(20);
 
 
-
-	system("pause");
+	return 0; 
 }

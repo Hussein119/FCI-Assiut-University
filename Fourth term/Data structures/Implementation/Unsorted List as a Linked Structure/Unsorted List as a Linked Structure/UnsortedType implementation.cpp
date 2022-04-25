@@ -1,3 +1,4 @@
+#include<iostream>
 #include"UnsortedType.h"
 #include"NodeType.h"
 template <class ItemType>

@@ -5,6 +5,7 @@ class FullStack
 class EmptyStack
 	// Exception class used by Pop and Top when stack is empty.
 {};
+#define MAX_ITEMS 500
 template<class ItemType>
 class StackType
 {
@@ -19,6 +20,6 @@ public:
 	ItemType Top() const;
 private:
 	int top;
-	int MAX_ITEMS  = 500;
+	int Stackcapacity;
 	ItemType* items;
 };

@@ -1,14 +1,15 @@
 #include"StackType.h"
 template<class ItemType>
 StackType<ItemType>::StackType(int size){
-	MAX_ITEMS = size;
+	items = new ItemType[size];
+	Stackcapacity = size;
 	top = -1;
-	items = new ItemType[MAX_ITEMS];
 }
 template<class ItemType>
 StackType<ItemType>::StackType(){
-	top = -1;
 	items = new ItemType[MAX_ITEMS];
+	Stackcapacity = MAX_ITEMS;
+	top = -1;
 }
 template<class ItemType>
 StackType<ItemType>::~StackType(){
