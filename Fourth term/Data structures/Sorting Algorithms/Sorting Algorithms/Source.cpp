@@ -13,6 +13,8 @@ using namespace std;
 // 40 45 50 60 80|30
 // 30 40 45 50 60 80 
 // Done 
+// Unsorted array: 50  40  80  60  45  30
+// sorted array: 30  40  45  50  60  80
 // O(n^2)
 template <typename Comparable> 
 void insertionSort(vector<Comparable>& a) {
@@ -43,6 +45,8 @@ void insertionSort(array <T, size>& items) {
 		items[moveIndex] = insert; // place insert item back into array 
 	} // end for loop 
 }// end function 
+
+// __________________________________________________________________________
 
 // selection sort 
 // O(n^2)
@@ -90,6 +94,7 @@ void selectionSort(vector<T>& a) {
 
 }
 
+// ____________________________________________________________________________
 // Merge Sort 
 // O(nlogn) 
 /**
@@ -100,22 +105,59 @@ void selectionSort(vector<T>& a) {
 	 vector<Comparable> tmpArray(a.size());
 	  mergeSort(a, tmpArray, 0, a.size() - 1);
  }
- /**
- * Internal method that makes recursive calls.
+ 
+ /** Internal method that makes recursive calls.
  * a is an array of Comparable items.
  * tmpArray is an array to place the merged result.
  * left is the left-most index of the subarray.
- * right is the right-most index of the subarray.
- */
+ * right is the right-most index of the subarray.*/
+
  template < typename Comparable>
  void mergeSort(vector<Comparable>& a, vector<Comparable>& tmpArray, int left, int right) {
-	 if (left < right){
+	 if (left < right) {
 		 int center = (left + right) / 2;
 		 mergeSort(a, tmpArray, left, center);
 		 mergeSort(a, tmpArray, center + 1, right);
 		 merge(a, tmpArray, left, center + 1, right);
 	 }
  }
+ /**
+ * Internal method that merges two sorted halves of a subarray.
+ * a is an array of Comparable items.
+ * tmpArray is an array to place the merged result.
+ * leftPos is the left-most index of the subarray.
+ * rightPos is the index of the start of the second half.
+ * rightEnd is the right-most index of the subarray.
+ */
+  template < typename Comparable>
+	 void merge(vector<Comparable> &a, vector<Comparable> &tmpArray,
+		  int leftPos, int rightPos, int rightEnd)
+	  {
+	  int leftEnd = rightPos - 1;
+	  int tmpPos = leftPos;
+	  int numElements = rightEnd - leftPos + 1;
+	 
+		  // Main loop
+		  while (leftPos <= leftEnd && rightPos <= rightEnd)
+		  if (a[leftPos] <= a[rightPos])
+		  tmpArray[tmpPos++] = std::move(a[leftPos++]);
+	      else
+		  tmpArray[tmpPos++] = std::move(a[rightPos++]);
+	 
+		  while (leftPos <= leftEnd) // Copy rest of first half
+		  tmpArray[tmpPos++] = std::move(a[leftPos++]);
+	 
+		  while (rightPos <= rightEnd) // Copy rest of right half
+		  tmpArray[tmpPos++] = std::move(a[rightPos++]);
+	 
+		  // Copy tmpArray back
+		  for (int i = 0; i < numElements; ++i, --rightEnd)
+		  a[rightEnd] = std::move(tmpArray[rightEnd]);
+	 }
+
+
+// ________________________________________________________________________________
+
 
  /* This function takes last element as pivot, places
  the pivot element at its correct position in sorted
@@ -124,20 +166,21 @@ void selectionSort(vector<T>& a) {
  of pivot */
  int partition(int arr[], int low, int high)
  {
-	 int pivot = arr[high]; // pivot
-	 int i = (low - 1); // Index of smaller element and indicates the right position of pivot found so far
-
-	 for (int j = low; j <= high - 1; j++)
-	 {
-		 // If current element is smaller than the pivot
-		 if (arr[j] < pivot)
-		 {
-			 i++; // increment index of smaller element
-			 swap(&arr[i], &arr[j]);
-		 }
-	 }
-	 swap(&arr[i + 1], &arr[high]);
-	 return (i + 1);
+	 int pivot = arr[low];
+	 int i = low; 
+	 int j = high; 
+	 while (i < j) {
+		 do {
+			 i++;
+		 } while (arr[i] <= pivot);
+		 do {
+			 j++;
+		 } while (arr[j] > pivot);
+		 if (i < j)
+			 swap(arr[i], arr[j]);
+	 }// end outer while loop  
+	 swap(arr[low], arr[j]);
+	 return j; 
  }
  /* The main function that implements QuickSort
  arr[] --> Array to be sorted,
@@ -147,26 +190,11 @@ void selectionSort(vector<T>& a) {
  {
 	 if (low < high)
 	 {
-		 /* pi is partitioning index, arr[p] is now
-		 at right place */
-		 int pi = partition(arr, low, high);
-
-		 // Separately sort elements before
-		 // partition and after partition
-		 quickSort(arr, low, pi - 1);
-		 quickSort(arr, pi + 1, high);
+		 int j = partition(arr, low, high);
+		 quickSort(arr, low, j);
+		 quickSort(arr, j + 1, high);
 	 }
  }
- /* Function to print an array */
- void printArray(int arr[], int size)
- {
-	 int i;
-	 for (i = 0; i < size; i++)
-		 cout << arr[i] << " ";
-	 cout << endl;
- }
- // Driver Code
-
 
 
  /**
@@ -201,6 +229,15 @@ void quicksort(vector<Comparable> &a, int left, int right){
 	  }
 
 
+
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+	int i;
+	for (i = 0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
 
 
 void main() {

@@ -1,0 +1,6 @@
+﻿  ItemType.cpp
+  Test program.cpp
+E:\SW Engineering\Fourth term\Data structures\Data Structures Implementation\ADTs Unsorted List\ADTs Unsorted List\Test program.cpp(4,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  UnsortedType implementation.cpp
+  Generating Code...
+  ADTs Unsorted List.vcxproj -> E:\SW Engineering\Fourth term\Data structures\Data Structures Implementation\ADTs Unsorted List\x64\Debug\ADTs Unsorted List.exe
